@@ -1,3 +1,6 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+
 :root{
     --dark: #1A1A1A;
     --primary: #E6E965;
@@ -7,7 +10,76 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 body{
     background-color: var(--dark);
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: row-reverse;
+    height: 60px;
+    background-color: transparent;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: 50px;
+}
+header li{
+    all: unset;
+}
+header li a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all 130ms ease-out;
+}
+header .logo{
+    position: absolute;
+    left: 20px;
+}
+header .logo img{
+    width: 60px;
+}
+.active{
+    color: var(--primary);
+    position: relative;
+    transition: all 200ms ease-out;
+}
+.active::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    bottom: -4px;
+    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: open 300ms ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes open{
+    form{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+
+
+.main-container{
+    background-image: url(../img/background.svg);
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    margin-top: -60px;
 }
