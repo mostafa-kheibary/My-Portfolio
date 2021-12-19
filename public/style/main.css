@@ -1,0 +1,13 @@
+:root{
+    --dark: #1A1A1A;
+    --primary: #E6E965;
+    --white: #F4F4F4;
+}
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--dark);
+}
