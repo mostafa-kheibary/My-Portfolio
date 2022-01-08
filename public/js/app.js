@@ -1,4 +1,5 @@
-const lis = document.querySelectorAll('header li a');
+const Lis = document.querySelectorAll('header li');
+const Inicator = document.querySelector('.line-spect')
 const typeText = document.querySelector('.type');
 const Texts = [`
 function person() {
@@ -9,18 +10,6 @@ function person() {
     } 
 }
 `];
-
-
-// menu clicked efect
-for (const li of lis) {
-    li.addEventListener("click", () => {
-        for (const li of lis) {
-            li.classList.remove('active');
-        }
-        li.classList.add('active');
-    });
-}
-
 // type writher effect
 let position = 0;
 function write() {
@@ -33,3 +22,16 @@ function write() {
 window.addEventListener('load',()=>{
     write();
 })
+
+
+
+for(const li of Lis){
+    li.addEventListener('mouseover',()=>{
+        Inicator.style.transform = `scale(1)`
+        Inicator.style.left = `${li.offsetLeft}px`
+        Inicator.style.width = `${li.offsetWidth}px`
+    });
+    li.addEventListener('mouseout',()=>{
+        Inicator.style.transform = `scale(0)`
+    })
+}
