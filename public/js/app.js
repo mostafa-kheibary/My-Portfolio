@@ -11,6 +11,7 @@ const NameInput = $.querySelector('.name-input');
 const EmailInput = $.querySelector('.email-input');
 const EmailError = $.querySelector('.lable-email');
 const FormError = $.querySelector('.lable-form');
+const FormStatus = $.querySelector('.form-status');
 const MessageInput = $.querySelector('.message-input');
 let position = 0;
 // **
@@ -27,7 +28,7 @@ function person() {
         Country : ‘Iran’;
         City : ‘Tehran’; 
     } 
-}
+}   
 `];
 
 // on load : 
@@ -53,10 +54,11 @@ function SendContact() {
         message: MessageInput.value
     };
     emailjs.send('service_t20nf7t', 'template_9juwq3e', templateParams)
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
+        .then(()=> {
+            FormStatus.classList.add('lable-show');
         }, function (error) {
-            console.log('FAILED...', error);
+            FormStatus.classList.add('status-error');
+            FormStatus.innerHTML = 'Please make sure about your information/conections';
         });
 }
 function Scroll() {
@@ -122,7 +124,7 @@ window.addEventListener('load', () => {
         write();
         loader.classList.add('loader-hide');
         document.body.style.overflow = 'visible';
-    }, 500)
+    }, 1500)
 });
 
 window.addEventListener('scroll', () => {

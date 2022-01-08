@@ -49,24 +49,105 @@ body{
 .loader{
     user-select: none;
     position: fixed;
-    width: 100%;
+    width: 100% ;
     height: 100%;
     z-index: 10000;
     background-color: white;
     color: black;
     transition: all 400ms ease-in;
 }
+.loader img{
+    width: 100%;
+    height: 100%;
+}
+.splash {
+    position: absolute;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--dark);
+    }
+    .spinner {
+        margin: 100px auto;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        text-align: center;
+    
+        -webkit-animation: sk-rotate 2s infinite linear;
+        animation: sk-rotate 2s infinite linear;
+      }
+    h6 {
+      margin: 0px;
+      color: red;
+      font-weight: 200;
+      font-size: 16px;
+    }
+  
+    .dot1,
+    .dot2 {
+      width: 60%;
+      height: 60%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      background-color: white;
+      border-radius: 100%;
+  
+      -webkit-animation: sk-bounce 2s infinite ease-in-out;
+      animation: sk-bounce 2s infinite ease-in-out;
+    }
+  
+    .dot2 {
+      top: auto;
+      bottom: 0;
+      -webkit-animation-delay: -1s;
+      animation-delay: -1s;
+    }
+  
+    @-webkit-keyframes sk-rotate {
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    @keyframes sk-rotate {
+      100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+      }
+    }
+  
+    @-webkit-keyframes sk-bounce {
+      0%,
+      100% {
+        -webkit-transform: scale(0);
+      }
+      50% {
+        -webkit-transform: scale(1);
+      }
+    }
+  
+    @keyframes sk-bounce {
+      0%,
+      100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+      }
+      50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+    }
+  
 .loader-hide{
     opacity: 0;
     visibility: hidden;
 }
-.loader h2{
-    position: absolute;
-    font-size: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
+
 header{
     position: fixed;
     display: flex;
@@ -449,6 +530,18 @@ header .logo img{
 }
 form{
     position: relative;
+}
+.form-status{
+    padding: 15px;
+    color: #71b65c;
+    visibility: hidden;
+    opacity: 0;
+}
+.status-error{
+    color:rgb(255, 87, 87);
+    transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
 }
 .lable-email{
     position: absolute;
