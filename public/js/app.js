@@ -124,7 +124,7 @@ window.addEventListener('load', () => {
         write();
         loader.classList.add('loader-hide');
         document.body.style.overflow = 'visible';
-    }, 1500)
+    }, 500)
 });
 
 window.addEventListener('scroll', () => {

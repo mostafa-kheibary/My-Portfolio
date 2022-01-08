@@ -6,6 +6,10 @@
     --primary: #E6E965;
     --white: #F4F4F4;
 }
+a{
+    color: white;
+    text-decoration: none;
+}
 *,::after,::before{
     margin: 0;
     padding: 0;
