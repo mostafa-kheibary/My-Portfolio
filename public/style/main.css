@@ -26,14 +26,61 @@ body{
 .space{
     height: 100px;
 }
+.elavator{
+    position: fixed;
+    background-color: var(--white);
+    box-shadow: 0 0 20px black;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 40px;
+    bottom: 25px;
+    transform: translateY(200px);
+    transition: all 300ms ease;
+}
+.elavator svg{
+    font-size: 22px;
+    color: var(--dark);
+}
+.elavator-show{
+    transform: translateY(0);
+}
+.loader{
+    user-select: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: white;
+    color: black;
+    transition: all 400ms ease-in;
+}
+.loader-hide{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader h2{
+    position: absolute;
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 header{
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: center;
     place-items: center;
     flex-direction: row-reverse;
+    width: 100%;
     height: 65px;
     background-color: transparent;
+    z-index: 1000;
+    transition: all 100ms ease;
+}
+.header-show{
+    background: rgb(31, 31, 31);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 header ul{
     position: relative;
@@ -59,6 +106,9 @@ header .logo{
 header .logo img{
     width: 60px;
 }
+.yellow{
+    color: var(--primary) !important;
+}
 .line-spect{
     position: absolute;
     bottom: 0;
@@ -77,7 +127,6 @@ header .logo img{
     background-position: center;
     color: var(--white);
     height: 1000px;
-    margin-top: -65px;
 }
 .main-container .content{
     display: flex;
@@ -259,6 +308,8 @@ header .logo img{
     margin-top: 15px;
 }
 .cv button{
+    position: relative;
+    display: block;
     margin-top:25px ;
     width: 150px;
     height: 40px;
@@ -269,7 +320,49 @@ header .logo img{
     color: #F4F4F4;
     font-size: 15px;
     font-weight: 100;
+    overflow:hidden;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition:0.08s ease-in;
 }
+.download-cv:after{
+    content:"My CV";
+    color:white;
+    position:absolute;
+    transform: translateY(-8px);
+    width:100%;
+    height:100%;
+    left:0;
+    text-align:center;
+    transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+  }
+  
+  .download-cv:before {
+    content:"download →";
+    transform: translateY(-8px);
+    height:100%;
+    width:100%;
+    top: 50%;
+    position:absolute;
+    left:-100%;
+    opacity: 0;
+    transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+  }
+  
+  .download-cv:hover{
+    background:#9e9e9e28;
+  }
+  
+  .download-cv:hover:before{
+    left:0;
+    opacity:1;
+    color:#fff;
+  }
+  .download-cv:hover:after{
+    left:100%;
+    opacity:0;
+  }
+  
 .right-content{
     background: url(../img/cir.png);
     background-size: contain;
@@ -277,6 +370,7 @@ header .logo img{
     background-position: center;
 }
 .contact-me{
+    position: relative;
     max-width: 1200px;
     margin-inline: auto;
     text-align: center;
@@ -307,7 +401,9 @@ header .logo img{
     row-gap: 10px;
     margin: 15px 0 20px 20px;
 }
-.contact-me .right ul li{
+.contact-me .right ul li,.contact-me .right a{
+    color: var(--white);
+    text-decoration: none;
     font-weight: 100;
 }
 .contact-me .right .my-social{
@@ -317,10 +413,16 @@ header .logo img{
     margin-top: 10px;
     display: flex;
     justify-content: left;
-    gap: 60px;
+    gap: 30px;
 }
-.contact-me .right .social *{
-    font-size: 20px;
+.contact-me .right .social svg{
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 100ms ease;
+}
+.contact-me .right .social svg:hover{
+    transform: scale(1.2);
 }
 .contact-me .left{
     width: 70%;
@@ -332,15 +434,56 @@ header .logo img{
     gap: 10px;
 }
 .contact-me .left .col-2 input{
-    background-color: rgba(196, 196, 196, 0.13);
+    color: var(--white);
+    background-color:  rgba(196, 196, 196, 0.13);
     border-radius: 4px;
     border: none;
     width: 100%;
     height: 45px;
     padding: 10px;
 }
+.contact-me .left .col-2 .col{
+    position: relative;
+    width: 100%;
+}
+form{
+    position: relative;
+}
+.lable-email{
+    position: absolute;
+    color:rgb(255, 87, 87);
+    font-size: 14px;
+    top: -24px;
+    left: 10px;
+    transform: translateY(4px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+.lable-form{
+    position: absolute;
+    color:rgb(255, 87, 87);
+    font-size: 14px;
+    top: -40px;
+    left: 10px;
+    transform: translateY(4px);
+    visibility:hidden;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+.lable-show{
+    transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
+}
+.contact-me input:focus,.contact-me textarea:focus{
+    outline: none;
+    background-color: rgba(172, 172, 172, 0.212) !important;
+}
 .contact-me .left textarea{
+    resize: none;
     background-color: rgba(196, 196, 196, 0.13);
+    color: var(--white);
     border-radius: 8px;
     padding: 15px;
     border: none;
@@ -348,6 +491,7 @@ header .logo img{
     width: 100%;
 }
 .contact-me .left button{
+    position: relative;
     margin-top: 10px;
     width: 100%;
     height: 40px;
@@ -356,8 +500,29 @@ header .logo img{
     border: 2px solid #E6E965;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 200ms ease;
 }
-
+.contact-me .left button:hover{
+    color: rgb(0, 0, 0);
+  }
+  
+  .fill:before {
+    content: "";
+    position: absolute;
+    color: black;
+    background: #E6E965;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    transition: top 0.09s ease-in;
+  }
+  
+  .fill:hover:before {
+    top: 0;
+  }
+  
 footer{
     display: flex;
     justify-content: center;
