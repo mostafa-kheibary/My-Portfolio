@@ -22,7 +22,7 @@ const contact = $.querySelector('.contact');
 // **
 const Sections = $.querySelectorAll('.sec');
 const Texts = [`
-function person() {
+function Person() {
     this.name : ‘mostafa kheibary’;
     this.live : {
         Country : ‘Iran’;
@@ -63,7 +63,7 @@ function SendContact() {
 }
 function Scroll() {
     if (scrollY >= 200) {
-        Elavator.classList.add('elavator-show')
+        Elavator.classList.add('elavator-show');
     }
     else {
         Elavator.classList.remove('elavator-show')

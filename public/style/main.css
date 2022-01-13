@@ -27,6 +27,17 @@ img,button,a{
 body{
     background-color: var(--dark);
 }
+/* scrool bar style */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #E6E965;
+    border-radius: 50px;
+    width: 5px;
+}
+
+
 .space{
     height: 100px;
 }

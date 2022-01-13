@@ -1,0 +1,120 @@
+@media only screen and (max-width: 1300px){
+    .profile,.body{
+        padding: 0 40px 0 40px;
+    }
+}
+@media only screen and (max-width: 960px){
+    input,
+textarea,
+button,
+select,
+a,svg {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+    header .logo{
+        left: 25px;
+    }
+    header menu{
+        display: none;
+    }
+    .code{
+        position: relative;
+    }
+    .code img{
+        width: clamp(100px, 75vw, 400px); 
+    }
+    .code .type{
+        left: 50%;
+        top: 50%;
+        font-size: clamp(10px, 5vw, 30px);
+        line-height: clamp(15px, 5vw, 35px);
+        transform: translate(-50%,-50%);
+    }
+    .main-container{
+        height: 500px;
+    }
+    .main-container .content{
+        padding-top: 50px;
+        text-align: center;
+        display: flex ;
+        flex-direction: column ;
+        gap: 0;
+    }
+    .main-container .social{
+        justify-content: space-around;
+        width: 100%;
+        margin: 40px 0 0 0 ;
+    }
+    .introduse  h1{
+        font-size: clamp(15px, 8vw, 40px);
+    }
+    .introduse  h2{
+        font-size: clamp(12px, 5vw, 30px);
+    }
+    .introduse button{
+        width: 80%;
+        font-size: clamp(12px, 8vw, 20px);
+    }
+    .sec-skils{
+        display: none;
+        margin-top: 250px;
+        width: 100%;
+    }
+    .sec-skils .skils{
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        text-align: center;
+    }
+    .body{
+        padding: 0;
+    }
+    .sec-skils .skils .skil{
+        width: auto;
+        font-size: 12px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    .cv{
+        display: block;
+        margin: 0 25px 0 25px;
+        padding: 0;
+    }
+    .cv .info{
+        width: 100%;
+        padding: 25px;
+    }
+    .cv p{
+        width: auto;
+    }
+    .cv .right-content{
+        display: none;
+    }
+    .profile h2{
+        margin-top: 10px;
+        font-size: clamp(15px, 8vw, 30px);
+    }
+    .profile h3{
+        font-size: clamp(20px, 10vw, 50px);
+    }
+    .profile{
+        margin-top: 100px;
+    }
+    .contact-me .body{
+        flex-direction: column-reverse;
+    }
+    .contact-me .body div{
+        width: 100%;
+    }
+    .contact-me .left,.contact-me .right{
+        padding: 20px;
+    }
+    
+}
+@media only screen and (max-width: 360px){
+    #top > div:nth-child(6){
+        display: none !important;
+    }
+}
