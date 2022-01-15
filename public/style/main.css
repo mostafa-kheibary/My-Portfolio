@@ -291,6 +291,7 @@ header .logo img{
     position: relative;
 }
 .type{
+    text-align: left;
     position: absolute;
     font-size: 28px;
     line-height: 30px;

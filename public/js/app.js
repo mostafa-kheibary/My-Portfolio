@@ -24,6 +24,7 @@ const Sections = $.querySelectorAll('.sec');
 const Texts = [`
 function Person() {
     this.name : ‘mostafa kheibary’;
+    this.age : 16;
     this.live : {
         Country : ‘Iran’;
         City : ‘Tehran’; 

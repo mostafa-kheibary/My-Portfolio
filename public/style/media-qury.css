@@ -11,6 +11,9 @@ select,
 a,svg {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+#top > div:nth-child(13){
+    display: none;
+}
     header .logo{
         left: 25px;
     }
@@ -97,7 +100,7 @@ a,svg {
         font-size: clamp(15px, 8vw, 30px);
     }
     .profile h3{
-        font-size: clamp(20px, 10vw, 50px);
+        font-size: clamp(20px, 10vw, 30px);
     }
     .profile{
         margin-top: 100px;
