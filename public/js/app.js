@@ -120,7 +120,7 @@ for (const li of Lis) {
     })
 }
 // loader 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         write();
         loader.classList.add('loader-hide');
