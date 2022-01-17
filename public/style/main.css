@@ -286,6 +286,7 @@ header .logo img{
 }
 .main-container img{
     width: 500px;
+    user-select: none;
 }
 .code{
     position: relative;

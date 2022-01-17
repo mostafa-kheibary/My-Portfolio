@@ -91,6 +91,11 @@ a,svg {
     }
     .cv p{
         width: auto;
+        font-size: 15px;
+        font-weight: 100;
+    }
+    .cv h4{
+        font-size: 30px;
     }
     .cv .right-content{
         display: none;
@@ -111,8 +116,22 @@ a,svg {
     .contact-me .body div{
         width: 100%;
     }
+    .contact-me h3{
+        margin-bottom: -30px;
+        font-size: 25px;
+    }
     .contact-me .left,.contact-me .right{
         padding: 20px;
+    }
+    .profile img{
+        width: 120px;
+        border-radius: 15px;
+    }
+    .contact-me .right h4{
+        font-size: 22px;
+    }
+    .contact-me .right li{
+        font-size: 15px;
     }
     
 }
@@ -120,4 +139,5 @@ a,svg {
     #top > div:nth-child(6){
         display: none !important;
     }
+    
 }
